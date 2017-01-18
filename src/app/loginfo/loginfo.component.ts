@@ -48,7 +48,7 @@ export class LoginfoComponent implements OnInit {
 
 
 
- 	filterByLog(filter) {
+ filterByLog(filter) {
 		 if(filter.fName && !filter.reasonName && !filter.contactName && !filter.positionName) {
 			this.logs = _.filter(this.original, log => log.fName === filter.fName);
 		 	}
@@ -67,26 +67,18 @@ export class LoginfoComponent implements OnInit {
 										else if(!filter.fName && filter.reasonName && filter.contactName && !filter.positionName) {
 									this.logs = _.filter(this.original, log => log.reasonName === filter.reasonName && log.contactName === filter.contactName);
 									}
-											else if(filter.fName && filter.reasonName && filter.contactName && filter.positionName) {
+										else if(filter.fName && filter.reasonName && filter.contactName && filter.positionName) {
 										this.logs = _.filter(this.original, log => log.fName === filter.fName && log.reasonName === filter.reasonName && log.contactName === filter.contactName && log.positionName === filter.positionName);
 										}
-												else
-
-													 if(!filter.fName && !filter.reasonName && !filter.contactName && !filter.positionName) {
+											else if
+											 (!filter.fName && !filter.reasonName && !filter.contactName && !filter.positionName) {
 															alert("Filter Null!")
 		 										}
 
-							}
+ }
 
 
-/*	filterByPosition(positionName) {
-			this.log = _.filter(this.original, positions =>  positions.positionName === positionName)
-	}
 
-	filterByReason(reasonName) {
-			this.log = _.filter(this.original, reasons =>  reasons.positionName === reasonName)
-	}
-*/
 
 
 }
