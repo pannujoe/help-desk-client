@@ -1,0 +1,85 @@
+
+<div class="wrapper">
+
+
+	<form class="form-control" >
+			<div class="container">
+			<div class="row">
+					<label class="col-sm-3 form-control "><strong>Name:</strong>
+						<select class="form-control"  [(ngModel)]="log.fName" name="fName">
+							<option></option>
+							<option value="Brian">Brian</option>
+							<option value="Richard">Richard</option>
+						</select>
+						</label>
+
+	<label class="col-sm-3 form-control"><strong>Contact:</strong>
+						<select class="form-control"  [(ngModel)]="log.contactName" name="contactName">
+							<option></option>
+							<option value="Email">Email:</option>
+							<option value="Phone">Phone</option>
+						</select>
+
+						</label>
+
+					<label class="col-sm-3 form-control"><strong>Reason:</strong>
+						<select class="form-control"  [(ngModel)]="log.reasonName" name="reasonName">
+							<option></option>
+							<option value="Data Correction">Data Correction</option>
+							<option value="Forgot Your Password">Forgot Your Password</option>
+						</select>
+</label>
+
+					<label class="col-sm-3 form-control"><strong>Position:</strong>
+						<select class="form-control"  [(ngModel)]="log.positionName" name="positionName">
+							<option></option>
+							<option value="PFT Coordinator">PFT Coordinator</option>
+							<option value="Superintendent">Superintendent</option>
+						</select>
+							</label>
+						<br>
+					<div class="btn btn-primary  form-control" (click)="filterByLog(log)">Filter</div>
+			</div>
+
+			</div>
+	</form>
+
+
+	<br>
+	<br>
+
+	<!--	<select class="form-control" [(ngModel)]="fName" name="fName">
+			<option value="Brian">Brian</option>
+			<option value="Richard">Richard</option>
+
+		</select><br>
+		<div class="btn btn-primary" (click)="filterByName(fName)">Filter</div> -->
+<div class="container">
+	<table class="table table-striped" >
+			<thead class="thead-inverse"> </thead>
+				<tbody>
+					<tr >
+
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Contact</th>
+						<th>Reason</th>
+						<th>Position</th>
+					</tr>
+					<tr *ngFor="let log of logs">
+						<td scope="row">{{log.fName}} </td>
+						<td>{{log.lName}}</td>
+						<td>{{log.contactName}}</td>
+						<td>{{log.reasonName}}</td>
+						<td>{{log.positionName}}</td>
+					</tr>
+
+
+		</tbody>
+	</table>
+</div>
+
+
+</div>
+
+

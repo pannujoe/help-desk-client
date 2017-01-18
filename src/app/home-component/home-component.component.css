@@ -1,0 +1,23 @@
+
+
+.div {
+	margin: auto;
+}
+
+
+.row {
+
+	margin-bottom : 15px;
+
+}
+
+
+
+
+.btn:hover {
+    background-color: #222;
+}
+
+#radio-toolbar:checked  {
+    background-color:#222;
+}
