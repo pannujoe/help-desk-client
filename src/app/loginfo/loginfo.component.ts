@@ -18,6 +18,7 @@ export class LoginfoComponent implements OnInit {
 	log: Log = {};
 	logs: Log[] = [];
 	original: Log[] = [];
+	array: Log[] = [];
 	//filter: any = [];
 
   constructor(private homeService: HomeServices) {	}
@@ -42,6 +43,7 @@ export class LoginfoComponent implements OnInit {
 	    	.subscribe(log => {
 						this.logs = log;
 	        	this.original = log;
+						this.array = log;
 	      });
 	}
 
@@ -76,6 +78,24 @@ export class LoginfoComponent implements OnInit {
 		 										}
 
  }
+
+//  filterByLog(filter) {
+// 	 var array =  [];
+// 	 	_.each(filter, function(key, val) {
+// 			 		array.push(key);
+// 					;
+// 		 })
+//   }
+
+
+/* var selected = [];
+
+for (email in emailLists) {
+    selected.concat(_.filter(emailLists[email], function (item) {
+        return item.selected === true;
+    }));
+}   */
+
 
 
 
