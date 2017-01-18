@@ -45,48 +45,37 @@ export class LoginfoComponent implements OnInit {
 	      });
 	}
 
- 	// filterByLog(filter) {
-	// 	 if(filter.fName && !filter.reasonName && !filter.contactName && !filter.positionName) {
 
-	// 		this.logs = _.filter(this.original, log => log.fName === filter.fName);
-
-	// 	 }
-
-	// 	 	else if(filter.fName && filter.reasonName && !filter.contactName && !filter.positionName) {
-
-	// 		this.logs = _.filter(this.original, log => log.fName === filter.fName && log.reasonName === filter.reasonName);
-	// 	 }
-
-	// 	 	else if(filter.fName && filter.reasonName && filter.contactName && !filter.positionName) {
-
-	// 		this.logs = _.filter(this.original, log => log.fName === filter.fName && log.reasonName === filter.reasonName && log.contactName === filter.contactName);
-	// 	 }
-
-	// 	 		else if(!filter.fName && filter.reasonName && filter.contactName && !filter.positionName) {
-
-	// 		this.logs = _.filter(this.original, log => log.reasonName === filter.reasonName && log.contactName === filter.contactName);
-	// 	 }
-
-
-	// }
 
 
  	filterByLog(filter) {
 		 if(filter.fName && !filter.reasonName && !filter.contactName && !filter.positionName) {
 			this.logs = _.filter(this.original, log => log.fName === filter.fName);
 		 	}
-			 else if(filter.fName && filter.reasonName && !filter.contactName && !filter.positionName) {
-					this.logs = _.filter(this.original, log => log.fName === filter.fName && log.reasonName === filter.reasonName);
+			  else if(filter.contactName && !filter.fName && !filter.reasonName && !filter.positionName) {
+					this.logs = _.filter(this.original, log => log.contactName === filter.contactName);
 					}
-				else if(filter.fName && filter.reasonName && !filter.contactName && !filter.positionName) {
+					 else if(filter.fName && filter.contactName && !filter.reasonName && !filter.positionName) {
+					this.logs = _.filter(this.original, log => log.fName === filter.fName && log.contactName === filter.contactName);
+						}
+							else if(filter.fName && filter.reasonName && !filter.contactName && !filter.positionName) {
 					this.logs = _.filter(this.original, log => log.fName === filter.fName && log.reasonName === filter.reasonName);
-					}
-						else if(filter.fName && filter.reasonName && filter.contactName && !filter.positionName) {
-							this.logs = _.filter(this.original, log => log.fName === filter.fName && log.reasonName === filter.reasonName && log.contactName === filter.contactName);
 							}
-								else if(!filter.fName && filter.reasonName && filter.contactName && !filter.positionName) {
+								else if(filter.fName && filter.reasonName && filter.contactName && !filter.positionName) {
+							this.logs = _.filter(this.original, log => log.fName === filter.fName && log.reasonName === filter.reasonName && log.contactName === filter.contactName);
+								}
+										else if(!filter.fName && filter.reasonName && filter.contactName && !filter.positionName) {
 									this.logs = _.filter(this.original, log => log.reasonName === filter.reasonName && log.contactName === filter.contactName);
 									}
+											else if(filter.fName && filter.reasonName && filter.contactName && filter.positionName) {
+										this.logs = _.filter(this.original, log => log.fName === filter.fName && log.reasonName === filter.reasonName && log.contactName === filter.contactName && log.positionName === filter.positionName);
+										}
+												else
+
+													 if(!filter.fName && !filter.reasonName && !filter.contactName && !filter.positionName) {
+															alert("Filter Null!")
+		 										}
+
 							}
 
 
