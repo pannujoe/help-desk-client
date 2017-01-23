@@ -2,9 +2,6 @@ body {
 	margin-bottom: 20px;
 }
 
-.btn:active{
-    background:olive;
-}
 
 .form-margin{
 		margin-top:40px;
@@ -14,3 +11,18 @@ body {
 #filterbtn{
 	width: 900px;
 }
+
+
+label {
+	margin-right: 15px;
+
+}
+
+label > select {
+	margin-top: 5px;
+}
+
+label:hover {
+	 background: #f3f3f3;
+}
+

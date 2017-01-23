@@ -5,7 +5,8 @@
 	<form class="form-control form-margin" >
 			<div class="container">
 			<div class="row justify-content-md-center">
-					<label class="col-sm-2 form-control"><strong>Name:</strong>
+					<label class="col-sm-2 form-control "><i class="fa fa-user" aria-hidden="true"></i>
+<strong> Name:</strong>
 						<select class="form-control"  [(ngModel)]="log.fName" name="fName" required>
 							<option></option>
 							<option value="Brian" >Brian</option>
@@ -13,7 +14,8 @@
 						</select>
 						</label>
 
-					<label class="col-sm-2 form-control"><strong>Contact:</strong>
+					<label class="col-sm-2 form-control"><i class="fa fa-phone" aria-hidden="true"></i>
+<strong> Contact:</strong>
 						<select class="form-control"  [(ngModel)]="log.contactName" name="contactName">
 							<option></option>
 							<option value="Email">Email:</option>
@@ -22,7 +24,8 @@
 
 						</label>
 
-					<label class="col-sm-2 form-control"><strong>Reason:</strong>
+					<label class="col-sm-2 form-control"><i class="fa fa-question" aria-hidden="true"></i>
+<strong> Reason:</strong>
 						<select class="form-control"  [(ngModel)]="log.reasonName" name="reasonName">
 							<option></option>
 							<option value="Data Correction">Data Correction</option>
@@ -30,7 +33,7 @@
 						</select>
 					</label>
 
-					<label class="col-sm-2 form-control"><strong>Position:</strong>
+					<label class="col-sm-2 form-control"><i class="fa fa-star" aria-hidden="true"></i><strong> Position:</strong>
 						<select class="form-control"  [(ngModel)]="log.positionName" name="positionName">
 							<option></option>
 							<option value="PFT Coordinator">PFT Coordinator</option>
@@ -38,7 +41,8 @@
 						</select>
 					</label>
 
-					<label class="col-sm-2 form-control"><strong>DateTime:</strong>
+					<label class="col-sm-2 form-control"><i class="fa fa-clock-o" aria-hidden="true"></i>
+<strong> DateTime:</strong>
 						<select class="form-control"  [(ngModel)]="log.positionName" name="positionName">
 							<option></option>
 							<option value="PFT Coordinator">PFT Coordinator</option>
@@ -46,7 +50,8 @@
 						</select>
 					</label>
 						<br>
-					<div class="btn btn-primary form-control" id="filterbtn" (click)="filterByLog(log)">Filter</div>
+					<div class="btn btn-primary form-control" id="filterbtn" (click)="filterByLog(log)"><i class="fa fa-search" aria-hidden="true"></i>
+<strong>Filter</strong></div>
 			</div>
 
 			</div>
@@ -68,7 +73,7 @@
 				<tbody>
 					<tr >
 
-						<th>Users Name</th>
+						<th> Users Name </th>
 						<th>Contact</th>
 						<th>Reason</th>
 						<th>Position</th>

@@ -20,6 +20,10 @@
     background-color: #222;
 }
 
+.btn:active{
+	background-color:#222;
+}
+
 #radio-toolbar:checked  {
     background-color:#222;
 }
