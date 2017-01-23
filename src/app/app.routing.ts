@@ -7,8 +7,10 @@ import { HeaderComponent } from './header.component';
 
 
 const APP_ROUTES: Routes = [
-	{path: 'nav', component: HeaderComponent},
+	{	path: 'nav', component: HeaderComponent},
+	{ path: '', component: HomeComponentComponent},
 	{ path: 'home', component: HomeComponentComponent},
+
 	{ path: 'logs', component: LoginfoComponent},
 
 ];
